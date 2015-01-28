@@ -1,0 +1,14 @@
+------------------------------------Code For Ajax Capture -------------------------------------------
+
+if (Request["type"] == "Value")
+                {
+                    Response.Write(Request["password"].ToString());
+                    Session["Password"] = Request["Password"].ToString();
+                    LblPassword.Text = Session["Password"].ToString();
+                    Session["Dup"] = "1";
+                }
+                else
+                {
+                    if (Session["Password"] != null)
+                        LblPassword.Text = Session["Password"].ToString();
+                }
